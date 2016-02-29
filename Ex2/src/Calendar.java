@@ -6,8 +6,7 @@ public class Calendar {
 
     public void showTodayDate () {
         GregorianCalendar aCase = new GregorianCalendar();
-        System.out.println(aCase.get(GregorianCalendar.YEAR)+"."+aCase.get(GregorianCalendar.MONTH)+"."
-                +aCase.get(GregorianCalendar.DAY_OF_MONTH));
+        System.out.println(aCase.get(GregorianCalendar.YEAR)+"."+aCase.get(GregorianCalendar.MONTH)+"."+aCase.get(GregorianCalendar.DAY_OF_MONTH));
     }
     public void setDate () {
         GregorianCalendar bCase = new GregorianCalendar();
