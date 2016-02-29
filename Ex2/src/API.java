@@ -3,7 +3,7 @@ import java.util.Random;
  * Created by Tremble on 2016/2/28.
  */
 public class API {
-    public  void showRandomNumer() {
+    public void showRandomNumer() {
         Random r = new Random(1000);
         for(int i = 0;i < 5;i++) {
             System.out.println();
