@@ -1,49 +1,56 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-
-/**
- * Created by Tremble on 2016/2/28.
- */
 public class StackOfIntegers {
 
-    static StackOfIntegers GetFactors(int n)
-    {
-        List<Integer> factors = new ArrayList<Integer>();
-        int x = 2;
-        while (x <= n)
-        {
-            if (n % x == 0)
-            {
-                factors.add(x);
-                n = n / x;
+    List<Integer> list = new ArrayList<Integer>();
+
+    public void getSub(int sum){
+        int middle = getMiddleAfter(sum);
+        for(int i = 2;i < middle;i++){
+            if(!isPrime(i)){
+                continue;
             }
-            else
-            {
-                x++;
-                if (x * x >= n)
-                {
-                    factors.add(n);
-                    break;
+            int yu = sum%i;
+            int last = sum/i;
+            if(yu == 0){
+                list.add(i);
+                if(isPrime(last)){
+                    list.add(last);
+                    return;
                 }
+                getSub(sum / i);
+                break;
             }
         }
-        Collections.sort(factors);
-        Collections.reverse(factors);
-        StackOfIntegers stackOfIntegers = new StackOfIntegers();
-        for(int i :factors){
-            //stackOfIntegers.push(i);
+    }
+
+    public int getMiddleAfter(int num){
+        if(num % 2 == 0){
+            return num / 2 + 1;
+        }else{
+            return (num + 1)/2;
         }
-
-        return stackOfIntegers;
     }
 
+    public boolean isPrime(int num){
+        boolean flag = true;
+        for(int i = 2;i < num;i++){
+            if(num%i == 0){
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
-        StackOfIntegers stackOfIntegers = GetFactors(120);
-        //System.out.println(stackOfIntegers.getSize());
-
+        // TODO Auto-generated method stub
+        StackOfIntegers stack = new StackOfIntegers();
+        stack.getSub(120);
+        System.out.println(stack.list);
     }
-
 
 }
