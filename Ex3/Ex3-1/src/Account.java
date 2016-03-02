@@ -1,13 +1,10 @@
 import java.util.Date;
 
-/**
- * Created by 15510 on 2016/3/1.
- */
 public class Account {
     private int id;
     private double balance;
     private double annualInterestRate;
-      //设置时间问题未解决！
+    //设置时间问题未解决！
     Date dateCreated = new Date();
 
 
@@ -54,7 +51,7 @@ public class Account {
         balance += depositing;
     }
 
-    public void main(String[] agrs) {
+    public static void main(String[] agrs) {
         Account aAccount = new Account();
         aAccount.Account(1122, 20000);
         aAccount.setAnnualInterestRate(.045);
