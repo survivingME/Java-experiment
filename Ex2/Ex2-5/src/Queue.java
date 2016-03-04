@@ -1,40 +1,38 @@
 
 public class Queue {
-    int[] element;
+    int[] elements;
+    int[] elements1;
     int size;
     int top;
 
-    public void Queue() {
+    public Queue() {
         this.size = 8;
-        //desire learning!
-        this.element = new int[this.size];
+        this.elements = new int[this.size];
         this.top = 0;
     }
 
     public void enqueue(int v) {
-        if (top < size) {
-            element[top] = v;
+        if(top < size) {
+            elements[top] = v;
+            top++;
         } else {
-            int[] nElement = new int[size * 2];
-            size *= 2;
-            for (int i = 0;i < size / 2;i++) {
-                nElement[i] = element[i];
+            this.elements1 = new int[this.size * 2];
+            for(int i = 0;i < top;i++) {
+                elements1[i] = elements[i];
             }
-            nElement[size / 2 + 1] = v;
-            element = nElement;
+            for(int i = 0;i < top;i++) {
+                elements[i] = elements1[i];
+            }
+            top++;
+            this.size *= 2;
         }
-        top++;
     }
 
     public int dequeue() {
-        int number = element[top];
-        int[] nElement = new int[top - 1];
-        for (int i = 0;i < (top - 1);i++) {
-            nElement[i] = element[i];
-        }
-        element = nElement;
+        int dequeue1 = elements[top - 1];
+        elements[top - 1] = 0;
         top--;
-        return number;
+        return dequeue1;
     }
 
     public boolean empty() {
@@ -44,16 +42,9 @@ public class Queue {
             return false;
         }
     }
-    public int getSize() {
-        return this.size;
+    public int Size() {
+        return elements.length;
     }
 
-    public static void main(String[] agrs) {
-        Queue aQueue = new Queue();
-        aQueue.enqueue(1);
 
-
-
-
-    }
 }

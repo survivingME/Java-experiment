@@ -10,11 +10,4 @@ public class calendar {
         bCase.setTimeInMillis(1234567898765L);
         System.out.println(bCase.getTime());
     }
-
-    public static void main(String[] agrs) {
-        calendar someDay = new calendar();
-        someDay.showTodayDate();
-        someDay.setDate();
-
-    }
 }
