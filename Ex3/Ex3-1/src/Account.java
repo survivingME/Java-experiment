@@ -1,18 +1,18 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Account {
     private int id;
     private double balance;
     private double annualInterestRate;
-    //设置时间问题未解决！
-    Date dateCreated = new Date();
+    private Date dateCreated;
 
 
-    public void Account() {
+    public Account() {
         this.id = 0;
         this.balance = 0;
         this.annualInterestRate = 0;
-        this.dateCreated.setTime(10928031984L);
+        this.dateCreated = new Date();
     }
 
     public void Account (int id, double annualInterestRate) {
@@ -38,9 +38,11 @@ public class Account {
     public void setAnnualInterestRate(double annualInterestRate1) {
         this.annualInterestRate = annualInterestRate1;
     }
-    public Date getDateCreated() {
-        return this.dateCreated;
+    public String getDateCreated() {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return formatter.format(this.dateCreated);
     }
+    public void setDateCreated(Date dateCreated) {this.dateCreated = dateCreated;}
     public double getMonthlyInterestRate() {
         return annualInterestRate / 12;
     }
@@ -49,16 +51,5 @@ public class Account {
     }
     public void deposit(int depositing) {
         balance += depositing;
-    }
-
-    public static void main(String[] agrs) {
-        Account aAccount = new Account();
-        aAccount.Account(1122, 20000);
-        aAccount.setAnnualInterestRate(.045);
-        aAccount.withDraw(2500);
-        aAccount.deposit(3000);
-        System.out.print(aAccount.balance+" "+
-                aAccount.getMonthlyInterestRate()+" "+
-                aAccount.dateCreated);
     }
 }

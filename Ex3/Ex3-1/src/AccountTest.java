@@ -1,5 +1,5 @@
 
-public class ATM {
+public class AccountTest {
     public static void main(String[] agrs) {
         Account aAccount = new Account();
         aAccount.Account(1122, 20000);
