@@ -49,7 +49,8 @@ public class payroll {
         System.out.println("工作小时数："+hour);
         System.out.println("每小时工资数：$"+hourlyPay);
         System.out.println("工资总收入：$"+sum);
-        System.out.println("所纳税款:\n    联邦税<"+federalTax * 100+"%>: $"+FTD.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue()+
+        System.out.println("所纳税款:\n    联邦税<"+federalTax * 100+"%>: $"+FTD.setScale(
+                2, BigDecimal.ROUND_HALF_UP).doubleValue()+
                 "\n     州税<"+stateTax * 100+"%>: $"+STD.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue()+
                 "\n   总纳税: $"+TD.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue()+
                 "\n净收入: $"+sTD.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue());
