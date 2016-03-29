@@ -1,3 +1,6 @@
+/**
+ * Created by 15510 on 2016/3/22.
+ */
 import java.util.Scanner;
 
 public class ATMTest {
@@ -9,6 +12,7 @@ public class ATMTest {
             userArray[i].setBalance(100);
         }
 
+
         //指定一个标签，当输入4时回到卡号输入
         label0:
         while(userArray[i] != null){
@@ -18,6 +22,7 @@ public class ATMTest {
                 System.out.println("输入的卡号有错！");
                 continue;
             }
+
 
             //指定一个标签，当操作完毕后回到主菜单
             label1:
@@ -38,12 +43,9 @@ public class ATMTest {
                         Scanner withdraw = new Scanner(System.in);
                         userArray[cardNumber.nextInt()].withDraw(withdraw.nextInt());
                         break label1;
-                    case 4:
-                        break label0;
+                    case 4:break label0;
                 }
             }
         }
-
-
     }
 }

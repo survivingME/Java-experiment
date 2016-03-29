@@ -1,3 +1,6 @@
+/**
+ * Created by 15510 on 2016/3/8.
+ */
 public class Fan {
     //数据域
     int SLOW = 1,MEDIUM = 2, FAST = 3;

@@ -1,3 +1,6 @@
+/**
+ * Created by 15510 on 2016/3/8.
+ */
 import java.util.Random;
 
 public class randomAPI {
