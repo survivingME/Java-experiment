@@ -10,15 +10,11 @@ public class Queue {
     int size;
     //数组即将被填入的元素的角标
     int top;
-
-    //
     public Queue() {
         size = 8;
         elements = new int[this.size];
         top = 0;
     }
-
-    //
     public void enqueue(int v) {
         if(top < size) {
             elements[top] = v;
@@ -37,8 +33,6 @@ public class Queue {
             top++;
         }
     }
-
-    //
     public int dequeue() {
         int dequeue1 = elements[0];
         int[] elements2 = elements;
@@ -48,8 +42,6 @@ public class Queue {
         }
         return dequeue1;
     }
-
-    //
     public boolean empty() {
         if (top == 0) {
             return true;
@@ -57,8 +49,6 @@ public class Queue {
             return false;
         }
     }
-
-    //
     public int getSize() {
         return size;
     }
