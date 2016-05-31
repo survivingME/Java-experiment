@@ -1,9 +1,10 @@
+/**
+ * Created by 15510 on 2016/3/8.
+ */
 import java.util.ArrayList;
 import java.util.List;
-
 public class StackOfIntegers {
     List<Integer> list = new ArrayList<Integer>();
-
     public void getSub(int sum){
         int middle = getMiddleAfter(sum);
         for(int i = 2;i < middle;i++){
@@ -23,7 +24,6 @@ public class StackOfIntegers {
             }
         }
     }
-
     public int getMiddleAfter(int num){
         if(num % 2 == 0){
             return num / 2 + 1;
@@ -31,7 +31,6 @@ public class StackOfIntegers {
             return (num + 1) / 2;
         }
     }
-
     public boolean isPrime(int num){
         boolean flag = true;
         for(int i = 2;i < num;i++){

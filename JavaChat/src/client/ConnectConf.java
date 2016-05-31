@@ -18,7 +18,7 @@ public class ConnectConf extends JDialog {
     JButton save = new JButton();
     JButton cancel = new JButton();
     JLabel DLGINFO=new JLabel(
-            "                  默认连接设置为  127.0.0.1:8888");
+            "默认连接设置为127.0.0.1:8888");
 
     JPanel panelSave = new JPanel();
     JLabel message = new JLabel();
@@ -49,7 +49,7 @@ public class ConnectConf extends JDialog {
     private void jbInit() throws Exception {
         this.setSize(new Dimension(300, 130));
         this.setTitle("连接设置");
-        message.setText(" 请输入服务器的IP地址:");
+        message.setText("请输入服务器的IP:");
         inputIp = new JTextField(10);
         inputIp.setText(userInputIp);
         inputPort = new JTextField(4);
@@ -60,7 +60,7 @@ public class ConnectConf extends JDialog {
         panelUserConf.setLayout(new GridLayout(2,2,1,1));
         panelUserConf.add(message);
         panelUserConf.add(inputIp);
-        panelUserConf.add(new JLabel(" 请输入服务器的端口号:"));
+        panelUserConf.add(new JLabel("请输入服务器的端口:"));
         panelUserConf.add(inputPort);
 
         panelSave.add(new Label("              "));
@@ -86,7 +86,7 @@ public class ConnectConf extends JDialog {
                         }
                         catch(UnknownHostException e){
                             DLGINFO.setText(
-                                    "                                    错误的IP地址！");
+                                    "错误的IP地址！");
 
                             return;
                         }
@@ -97,7 +97,7 @@ public class ConnectConf extends JDialog {
                             savePort = Integer.parseInt(inputPort.getText());
 
                             if(savePort<1 || savePort>65535){
-                                DLGINFO.setText("               侦听端口必须是0-65535之间的整数!");
+                                DLGINFO.setText("侦听端口必须是0-65535之间的整数!");
                                 inputPort.setText("");
                                 return;
                             }
@@ -105,7 +105,7 @@ public class ConnectConf extends JDialog {
                             dispose();
                         }
                         catch(NumberFormatException e){
-                            DLGINFO.setText("                错误的端口号,端口号请填写整数!");
+                            DLGINFO.setText("错误的端口号,端口号请填写整数!");
                             inputPort.setText("");
                             return;
                         }
@@ -117,7 +117,7 @@ public class ConnectConf extends JDialog {
         this.addWindowListener(
                 new WindowAdapter(){
                     public void windowClosing(WindowEvent e){
-                        DLGINFO.setText("                  默认连接设置为  127.0.0.1:8888");
+                        DLGINFO.setText("默认连接设置为127.0.0.1:8888");
                     }
                 }
         );
@@ -126,7 +126,7 @@ public class ConnectConf extends JDialog {
         cancel.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e){
-                        DLGINFO.setText("                  默认连接设置为  127.0.0.1:8888");
+                        DLGINFO.setText("默认连接设置为127.0.0.1:8888");
                         dispose();
                     }
                 }

@@ -5,7 +5,8 @@ public class taxCalculation {
         int type;
         long income;
         String input;
-        double taxRate = 0.1, taxRate1 = 0.15, taxRate2 = 0.25, taxRate3 = 0.28, taxRate4 = 0.33, taxRate5 = 0.35, tax = 0;
+        double taxRate = 0.1, taxRate1 = 0.15, taxRate2 = 0.25, taxRate3 = 0.28, taxRate4 = 0.33,
+                taxRate5 = 0.35, tax = 0;
         Scanner scanner = new Scanner(System.in);
 
         //列出种类
@@ -37,15 +38,19 @@ public class taxCalculation {
 
                 }
                 else if (income <= 171550) {
-                    tax = taxRate3 *(income - 82250) + taxRate * 8350 + taxRate1 * (33950 - 8350) + taxRate2 * (82250 - 33590);
+                    tax = taxRate3 *(income - 82250) + taxRate * 8350 + taxRate1 * (33950 - 8350) +
+                            taxRate2 * (82250 - 33590);
 
                 }
                 else if (income <= 372950) {
-                    tax = taxRate4 *(income - 171550) + taxRate * 8350 + taxRate1 * (33950 - 8350) + taxRate2 * (82250 - 33950) + taxRate3 * (171550 - 82250);
+                    tax = taxRate4 *(income - 171550) + taxRate * 8350 + taxRate1 * (33950 - 8350) +
+                            taxRate2 * (82250 - 33950) + taxRate3 * (171550 - 82250);
 
                 }
                 else if (income > 372950) {
-                    tax = taxRate5 *(income - 372950) + taxRate * 8350 + taxRate1 * (33950 - 8350) + taxRate2 * (82250 - 33950) + taxRate3 * (171550 - 82250) + taxRate4 * (372950 - 171550);
+                    tax = taxRate5 *(income - 372950) + taxRate * 8350 + taxRate1 * (33950 - 8350) +
+                            taxRate2 * (82250 - 33950) + taxRate3 * (171550 - 82250) +
+                            taxRate4 * (372950 - 171550);
 
                 }
             }
@@ -63,15 +68,19 @@ public class taxCalculation {
 
                 }
                 else if (income <= 208850) {
-                    tax = taxRate3 * (income - 137050) + taxRate * 16700 + taxRate1 * (67900 - 16700) + taxRate2 * (137050 - 67900);
+                    tax = taxRate3 * (income - 137050) + taxRate * 16700 + taxRate1 * (67900 - 16700) +
+                            taxRate2 * (137050 - 67900);
 
                 }
                 else if (income <= 372950) {
-                    tax = taxRate4 * (income - 208850) + taxRate * 16700 + taxRate1 * (67900 - 16700) + taxRate2 * (137050 - 67900) + taxRate3 * (208850 - 137050);
+                    tax = taxRate4 * (income - 208850) + taxRate * 16700 + taxRate1 * (67900 - 16700) +
+                            taxRate2 * (137050 - 67900) + taxRate3 * (208850 - 137050);
 
                 }
                 else if (income > 372950) {
-                    tax = taxRate5 * (income - 372950) + taxRate * 16700 + taxRate1 * (67900 - 16700) + taxRate2 * (137050 - 67900) + taxRate3 * (208850 - 137050) + taxRate4 * (372950 - 208850);
+                    tax = taxRate5 * (income - 372950) + taxRate * 16700 + taxRate1 * (67900 - 16700) +
+                            taxRate2 * (137050 - 67900) + taxRate3 * (208850 - 137050) +
+                            taxRate4 * (372950 - 208850);
 
                 }
             }
@@ -89,15 +98,19 @@ public class taxCalculation {
 
                 }
                 else if (income <= 104425) {
-                    tax = taxRate3 * (income - 68525) + taxRate * 8350 + taxRate1 * (33950 - 8350) + taxRate2 * (68525 - 33590);
+                    tax = taxRate3 * (income - 68525) + taxRate * 8350 + taxRate1 * (33950 - 8350) +
+                            taxRate2 * (68525 - 33590);
 
                 }
                 else if (income <= 186475) {
-                    tax = taxRate4 * (income - 104425) + taxRate * 8350 + taxRate1 * (33950 - 8350) + taxRate2 * (68525 - 33590) + taxRate3 * (104425 - 68525);
+                    tax = taxRate4 * (income - 104425) + taxRate * 8350 + taxRate1 * (33950 - 8350) +
+                            taxRate2 * (68525 - 33590) + taxRate3 * (104425 - 68525);
 
                 }
                 else if (income > 186475) {
-                    tax = taxRate5 * (income - 186475) + taxRate * 8350 + taxRate1 * (33950 - 8350) + taxRate2 * (68525 - 33590) + taxRate3 * (104425 - 68525) + taxRate4 * (186476 - 104425);
+                    tax = taxRate5 * (income - 186475) + taxRate * 8350 + taxRate1 * (33950 - 8350) +
+                            taxRate2 * (68525 - 33590) + taxRate3 * (104425 - 68525) +
+                            taxRate4 * (186476 - 104425);
 
                 }
             }
@@ -115,15 +128,19 @@ public class taxCalculation {
 
                 }
                 else if (income <= 190200) {
-                    tax = taxRate3 * (income - 117450) + taxRate * 11950 + taxRate1 * (45500 - 11950) + taxRate2 * (117450 - 45500);
+                    tax = taxRate3 * (income - 117450) + taxRate * 11950 + taxRate1 * (45500 - 11950) +
+                            taxRate2 * (117450 - 45500);
 
                 }
                 else if (income <= 372950) {
-                    tax = taxRate4 * (income - 190200) + taxRate * 11950 + taxRate1 * (45500 - 11950) + taxRate2 * (117450 - 45500) + taxRate3 * (190200 - 117450);
+                    tax = taxRate4 * (income - 190200) + taxRate * 11950 + taxRate1 * (45500 - 11950) +
+                            taxRate2 * (117450 - 45500) + taxRate3 * (190200 - 117450);
 
                 }
                 else if (income > 372950) {
-                    tax = taxRate5 * (income - 372950) + taxRate * 11950 + taxRate1 * (45500 - 11950) + taxRate2 * (117450 - 45500) + taxRate3 * (190200 - 117450) + taxRate4 * (372950 - 190200);
+                    tax = taxRate5 * (income - 372950) + taxRate * 11950 + taxRate1 * (45500 - 11950) +
+                            taxRate2 * (117450 - 45500) + taxRate3 * (190200 - 117450) +
+                            taxRate4 * (372950 - 190200);
 
                 }
             }

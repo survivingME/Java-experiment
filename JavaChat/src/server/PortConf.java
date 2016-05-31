@@ -16,7 +16,7 @@ public class PortConf extends JDialog {
     JButton save = new JButton();
     JButton cancel = new JButton();
     public static JLabel DLGINFO=new JLabel(
-            "                              默认端口号为:8888");
+            "          默认端口号为:8888");
 
     JPanel panelSave = new JPanel();
     JLabel message = new JLabel();
@@ -72,7 +72,7 @@ public class PortConf extends JDialog {
                             savePort=Integer.parseInt(PortConf.portNumber.getText());
 
                             if(savePort<1 || savePort>65535){
-                                PortConf.DLGINFO.setText("               侦听端口必须是0-65535之间的整数!");
+                                PortConf.DLGINFO.setText("侦听端口必须是0-65535之间的整数!");
                                 PortConf.portNumber.setText("");
                                 return;
                             }
@@ -80,7 +80,7 @@ public class PortConf extends JDialog {
                             dispose();
                         }
                         catch(NumberFormatException e){
-                            PortConf.DLGINFO.setText("                错误的端口号,端口号请填写整数!");
+                            PortConf.DLGINFO.setText("错误的端口号,端口号请填写整数!");
                             PortConf.portNumber.setText("");
                             return;
                         }
@@ -92,7 +92,7 @@ public class PortConf extends JDialog {
         this.addWindowListener(
                 new WindowAdapter(){
                     public void windowClosing(WindowEvent e){
-                        DLGINFO.setText("                              默认端口号为:8888");
+                        DLGINFO.setText("          默认端口号为:8888");
                     }
                 }
         );
@@ -101,7 +101,7 @@ public class PortConf extends JDialog {
         cancel.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e){
-                        DLGINFO.setText("                              默认端口号为:8888");
+                        DLGINFO.setText("          默认端口号为:8888");
                         dispose();
                     }
                 }

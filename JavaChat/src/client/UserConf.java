@@ -17,7 +17,7 @@ public class UserConf extends JDialog {
     JButton save = new JButton();
     JButton cancel = new JButton();
     JLabel DLGINFO=new JLabel(
-            "                         默认用户名为：匆匆过客");
+            "          默认用户名为：匿名君");
 
     JPanel panelSave = new JPanel();
     JLabel message = new JLabel();
@@ -71,12 +71,12 @@ public class UserConf extends JDialog {
                     public void actionPerformed (ActionEvent a) {
                         if(userName.getText().equals("")){
                             DLGINFO.setText(
-                                    "                                 用户名不能为空！");
+                                    "          用户名不能为空！");
                             userName.setText(userInputName);
                             return;
                         }
                         else if(userName.getText().length() > 15){
-                            DLGINFO.setText("                    用户名长度不能大于15个字符！");
+                            DLGINFO.setText("          用户名长度不能大于15个字符！");
                             userName.setText(userInputName);
                             return;
                         }
@@ -90,7 +90,7 @@ public class UserConf extends JDialog {
         this.addWindowListener(
                 new WindowAdapter(){
                     public void windowClosing(WindowEvent e){
-                        DLGINFO.setText("                         默认用户名为：匆匆过客");
+                        DLGINFO.setText("          默认用户名为：匿名君");
                     }
                 }
         );
@@ -99,7 +99,7 @@ public class UserConf extends JDialog {
         cancel.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e){
-                        DLGINFO.setText("                         默认用户名为：匆匆过客");
+                        DLGINFO.setText("          默认用户名为：匿名君");
                         dispose();
                     }
                 }

@@ -17,7 +17,7 @@ public class ChatClient extends JFrame implements ActionListener{
     private static final long serialVersionUID = 1L;
     String ip = "127.0.0.1";//连接到服务端的ip地址
     int port = 8888;//连接到服务端的端口号
-    String userName = "匿名用户";//用户名
+    String userName = "匿名君";//用户名
     int type = 0;//0表示未连接，1表示已连接
 
     JComboBox combobox;//选择发送消息的接受者

@@ -41,13 +41,23 @@ public class taxCaculation {
             } else if(income <= brackets[type][1]) {
                 tax = (income - brackets[type][0]) * rates[1] + brackets[type][0] * rates[0];
             } else if(income <= brackets[type][2]) {
-                tax = (income - brackets[type][1]) * rates[2] + (brackets[type][1] - brackets[type][0]) * rates[1] + brackets[type][0] * rates[0];
+                tax = (income - brackets[type][1]) * rates[2] + (brackets[type][1] - brackets[type][0]) *
+                        rates[1] + brackets[type][0] * rates[0];
             } else if(income <= brackets[type][3]) {
-                tax = (income - brackets[type][2]) * rates[3] + (brackets[type][2] - brackets[type][1]) * rates[2] + (brackets[type][1] - brackets[type][0]) * rates[1] + brackets[type][0] * rates[0];
+                tax = (income - brackets[type][2]) * rates[3] + (brackets[type][2] - brackets[type][1]) *
+                        rates[2] + (brackets[type][1] - brackets[type][0]) * rates[1] + brackets[type][0] *
+                        rates[0];
             } else if(income <= brackets[type][4]) {
-                tax = (income - brackets[type][3]) * rates[4] + (brackets[type][3] - brackets[type][2]) * rates[3] +(brackets[type][2] - brackets[type][1]) * rates[2] + (brackets[type][1] - brackets[type][0]) * rates[1] + brackets[type][0] * rates[0];
+                tax = (income - brackets[type][3]) * rates[4] + (brackets[type][3] - brackets[type][2]) *
+                        rates[3] +(brackets[type][2] - brackets[type][1]) *
+                        rates[2] + (brackets[type][1] - brackets[type][0]) * rates[1] + brackets[type][0] *
+                        rates[0];
             } else if(income > brackets[type][4]) {
-                tax = (income - brackets[type][4]) * rates[5] + (brackets[type][4] - brackets[type][3]) * rates[4] + (brackets[type][3] - brackets[type][2]) * rates[3] +(brackets[type][2] - brackets[type][1]) * rates[2] + (brackets[type][1] - brackets[type][0]) * rates[1] + brackets[type][0] * rates[0];
+                tax = (income - brackets[type][4]) * rates[5] + (brackets[type][4] - brackets[type][3]) *
+                        rates[4] + (brackets[type][3] - brackets[type][2]) *
+                        rates[3] +(brackets[type][2] - brackets[type][1]) *
+                        rates[2] + (brackets[type][1] - brackets[type][0]) *
+                        rates[1] + brackets[type][0] * rates[0];
             }
         }
         System.out.println("Tax is "+tax);

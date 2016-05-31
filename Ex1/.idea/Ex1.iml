@@ -5,9 +5,14 @@
     <output-test url="file:///test/Ex1" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/Ex1-3/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ex1-2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ex1-1/src" isTestSource="false" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/Ex1-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ex1-3/src" isTestSource="false" />
+>>>>>>> 967431682279903cdcc62abce50087bf50262a23
       <sourceFolder url="file://$MODULE_DIR$/Ex1-5/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
