@@ -1,22 +1,29 @@
 
 public class Queue {
+    //原始数组
     int[] elements;
+    //辅助数组，在原始数组长度需要扩大时将其中元素暂存在辅助数组中
     int[] elements1;
+    //数组的长度
     int size;
+    //数组即将被填入的元素的角标
     int top;
 
+    //
     public Queue() {
-        this.size = 8;
-        this.elements = new int[this.size];
-        this.top = 0;
+        size = 8;
+        elements = new int[this.size];
+        top = 0;
     }
 
+    //
     public void enqueue(int v) {
         if(top < size) {
             elements[top] = v;
             top++;
         } else {
-            this.elements1 = new int[this.size * 2];
+            size *= 2;
+            this.elements1 = new int[size];
             for(int i = 0;i < top;i++) {
                 elements1[i] = elements[i];
             }
@@ -24,10 +31,10 @@ public class Queue {
                 elements[i] = elements1[i];
             }
             top++;
-            this.size *= 2;
         }
     }
 
+    //
     public int dequeue() {
         int dequeue1 = elements[top - 1];
         elements[top - 1] = 0;
@@ -35,6 +42,7 @@ public class Queue {
         return dequeue1;
     }
 
+    //
     public boolean empty() {
         if (top == 0) {
             return true;
@@ -42,8 +50,10 @@ public class Queue {
             return false;
         }
     }
-    public int Size() {
-        return elements.length;
+
+    //got a error
+    public int getSize() {
+        return size;
     }
 
 
